@@ -1,0 +1,19 @@
+.ProductList{
+width: 1000px;
+margin: 0 auto;
+display: flex;  
+justify-content: center;
+flex-wrap: wrap;
+
+
+}
+
+.ProductList_container{
+  width: 200px;
+  border: 1px solid gray;
+  height: 300px;
+  text-align: center;
+  margin-bottom: 3em;
+  margin-left: 3em;
+  background: grey;
+}
