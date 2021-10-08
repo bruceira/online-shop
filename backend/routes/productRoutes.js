@@ -10,11 +10,16 @@ router.get("/product", async (req, res) => {
   res.json(data)
 })
 
+router.post("/product/new", async (req, res) => {
 
-router.post("/product/new", (req, res) => {
-  const data = new Products(req.body)
+  const data = await new Products(req.body)
   data.save()
   res.json(data)
 })
 
+router.delete("/product/delete/:id", async (req, res) => {
+  const data = await Products.findByIdAndDelete(req.params.id)
+  res.json(data)
+
+})
 module.exports = router
